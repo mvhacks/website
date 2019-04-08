@@ -1,0 +1,12 @@
+
+
+Layout:
+1. MV Hacks Logo and Opening Screen
+2. Info (What is MVHacks?) (show pictures on the right which move faster than the text, text on the left)
+3. FAQ
+4. Schedule and Activities
+5. Prizes
+6. Sponsors (Dynamic w/ Spreadsheet)
+7. Our Team (take pics with Akhand's camera from the Oracle)
+8. Campus Ambassadors
+9. Footer (Social Media and Past Sites)
