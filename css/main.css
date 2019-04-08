@@ -17,7 +17,7 @@ html, body {
 	color: #fff;
 	opacity: 0;
 	transition: opacity .5s ease;
-	background: #1d1d1dde;
+	background: #1d1d1dff;
 	z-index: 20;
 }
 
