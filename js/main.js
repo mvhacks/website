@@ -12,7 +12,7 @@ let frontPageTimeline = anime.timeline({
 		},
 		{
 			value: '#1d1d1d',
-			duration: 500,
+			duration: 1000,
 			delay: 500,
 			easing: 'easeOutSine'
 		}
@@ -28,7 +28,7 @@ frontPageTimeline.play();
 
 setTimeout(() => {
 	particlesJS.load('particles', '../assets/particles.json');
-}, 2000);
+}, 2500);
 
 window.onscroll = e => {
 	if (window.scrollY > 0) {
