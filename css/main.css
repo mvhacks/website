@@ -9,6 +9,10 @@ html, body {
 	height: 100%;
 }
 
+a {
+	cursor: pointer;
+}
+
 #navbar {
 	position: fixed;
 	width: 100%;
@@ -19,44 +23,11 @@ html, body {
 	transition: opacity .5s ease;
 	background: #1d1d1dff;
 	z-index: 20;
+	box-shadow: 0 0.2rem 0.4rem rgba(0,0,0,0.23);
 }
 
 #navbar-links > a {
 	margin: 0 12px;
-}
-
-#front-page {
-	height: 100vh;
-	background: #fff;
+	font-size: 18px;
 	color: #fff;
-}
-
-a {
-	
-}
-
-.logo-image {
-	filter: drop-shadow(5px 40px 13px #000);
-	height: 100%;
-	animation-duration: 3s;
-	animation-name: float;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: infinite;
-	animation-direction: alternate;
-}
-
-@keyframes float {
-	0% {
-		-webkit-transform: translate3d(0, -14px, 0);
-		transform: translate3d(0, -14px, 0)
-	}
-	to {
-		-webkit-transform: translate3d(0, 14px, 0);
-		transform: translate3d(0, 14px, 0)
-	}
-}
-
-
-#what-is {
-	height: 100vh;
 }

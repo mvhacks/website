@@ -31,7 +31,9 @@ setTimeout(() => {
 }, 2500);
 
 window.onscroll = e => {
-	if (window.scrollY > 0) {
+	let { scrollY } = window;
+	
+	if (scrollY > 0) {
 
 		if (navbar.style.opacity !== '1') {
 			navbar.style.opacity = '1';
@@ -42,6 +44,17 @@ window.onscroll = e => {
 	}
 }
 
-function whatPage() {
-	return Math.floor(window.scrollY / window.innerHeight);
+function scrollToSection(id) {
+	document.querySelector('#' + id).scrollIntoView({
+		behavior: 'smooth'
+	});
+}
+
+/* unregister service workers */
+if (navigator.serviceWorker) {
+	navigator.serviceWorker.getRegistrations(regs => {
+		for (let reg of regs) {
+			reg.unregister();
+		}
+	});
 }

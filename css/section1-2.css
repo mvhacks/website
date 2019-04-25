@@ -1,0 +1,61 @@
+/* section 1 */
+
+#front-page {
+	height: 100vh;
+	background: #fff;
+	color: #fff;
+}
+
+.logo-image {
+	filter: drop-shadow(5px 40px 13px #000);
+	height: 100%;
+	animation-duration: 3s;
+	animation-name: float;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+@keyframes float {
+	0% {
+		-webkit-transform: translate3d(0, -14px, 0);
+		transform: translate3d(0, -14px, 0)
+	}
+	to {
+		-webkit-transform: translate3d(0, 14px, 0);
+		transform: translate3d(0, 14px, 0)
+	}
+}
+
+/* section 2 */
+
+#whatis {
+	min-height: 100vh;
+}
+
+#image-display {
+	display: flex;
+	padding: 0 4px;
+	max-width: 50%;
+}
+
+#image-display > div {
+	flex: 50%;
+	max-width: 50%;
+	padding: 0 12px;
+}
+
+#image-display > div img {
+	margin-top: 24px;
+	vertical-align: middle;
+	max-width: 100%;
+	border-radius: 6px;
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.12), 0 1px 5px 0 rgba(0,0,0,.2);
+	transition: all 0.2s ease;
+}
+
+#image-display > div img:hover {
+	transform: scale(1.1);
+	box-shadow: 0 8px 8px 0 rgba(0,0,0,.28), 0 6px 4px -8px rgba(0,0,0,.24), 0 4px 20px 0 rgba(0,0,0,.4);
+	filter: brightness(1.3);
+}
