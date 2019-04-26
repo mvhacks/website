@@ -2,7 +2,6 @@
 
 #front-page {
 	height: 100vh;
-	background: #fff;
 	color: #fff;
 }
 
@@ -31,6 +30,15 @@
 
 #whatis {
 	min-height: 100vh;
+}
+
+#whatis-text {
+	position: -webkit-sticky;
+	position: -moz-sticky;
+	position: -ms-sticky;
+	position: -o-sticky;
+	position: sticky;
+	top: 100px;
 }
 
 #image-display {

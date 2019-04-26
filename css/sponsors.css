@@ -1,0 +1,45 @@
+#sponsors {
+	background: #1d1d1d;
+}
+
+#sponsors > div > h1 {
+	font-family: 'Raleway';
+	color: #ec4c37;
+	font-size: 80px;
+}
+
+.sponsor-image {
+	display: block;
+	flex-basis: 25%;
+}
+
+.sponsor-image > div {
+	padding: 25px;
+}
+
+.sponsor-image > div > img {
+	max-width: 100%;
+	transition: all 150ms linear;
+	filter: grayscale(.2);
+}
+
+.sponsor-image > div > img:hover {
+	max-width: 100%;
+	filter: grayscale(1);
+	transform: scale(1.1);
+	filter: drop-shadow(10px 10px 10px #000);
+}
+
+#partners {
+	background: #1d1d1d;
+}
+
+#partners > div > h1 {
+	font-family: 'Raleway';
+	color: #ec4c37;
+	font-size: 80px;
+}
+
+.partner-image {
+	flex: 1;
+}
