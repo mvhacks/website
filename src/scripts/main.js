@@ -1,3 +1,6 @@
+import 'particles.js/particles';
+import anime from 'animejs';
+import VanillaTilt from 'vanilla-tilt';
 
 let frontPageTimeline = anime.timeline({
 	autoplay: false,
@@ -182,4 +185,11 @@ function handlePhotoData(data) {
 	let divs = document.querySelectorAll('#image-display > div');
 	divs[0].innerHTML = col1;
 	divs[1].innerHTML = col2;
+
+	setTimeout(() => {
+		VanillaTilt.init(document.querySelectorAll('#image-display > div img'), {
+			scale: 1.1,
+			max: 10
+		});
+	}, 100);
 }
