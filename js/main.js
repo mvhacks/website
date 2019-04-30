@@ -64,7 +64,7 @@ let sheetId = '191YLtCW0myhV1qoNfudca9MaiqTTVDRPsm8YZWBTkRU';
 let apiKey = 'AIzaSyDEBLKN17IKxy0IsigeP4XB6ivTh-dGRac';
 
 fetch(
-	`https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values:batchGet?ranges=Sponsors&ranges=Schedule&ranges=FAQ&key=${apiKey}`
+	`https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values:batchGet?ranges=Sponsors&ranges=Photos&ranges=Schedule&ranges=FAQ&key=${apiKey}`
 ).then(res => res.json()).then(res => {
 	let ranges = res.valueRanges;
 
@@ -75,6 +75,8 @@ fetch(
 			handleScheduleData(ranges[i].values);
 		} else if (ranges[i].range.includes('FAQ')) {
 			handleFAQData(ranges[i].values);
+		} else if (ranges[i].range.includes('Photos')) {
+			handlePhotoData(ranges[i].values);
 		}
 	}
 });
@@ -90,7 +92,7 @@ function handleSponsorData(data) {
 			partnerHTML += `
 				<a href="${each[3]}" target="_blank" class="sponsor-image partner-image">
 					<div>
-						<img alt="${each[1]}" src="${each[2]}" style="${each[4] || ''}">
+						<img title=${each[1]} alt="${each[1]}" src="${each[2]}" style="${each[4] || ''}">
 					</div>
 				</a>
 			`;
@@ -98,7 +100,7 @@ function handleSponsorData(data) {
 			sponsorHTML += `
 				<a href="${each[3]}" target="_blank" class="sponsor-image">
 					<div>
-						<img alt="${each[1]}" src="${each[2]}" style="${each[4] || ''}">
+						<img title=${each[1]} alt="${each[1]}" src="${each[2]}" style="${each[4] || ''}">
 					</div>
 				</a>
 			`;
@@ -139,6 +141,7 @@ function handleFAQData(data) {
 	divs[0].innerHTML = col1;
 	divs[1].innerHTML = col2;
 
+	/* activate interactivity */
 	setTimeout(() => {
 		let faq = document.getElementsByClassName('faq-item');
 
@@ -156,4 +159,27 @@ function handleFAQData(data) {
 			}
 		}
 	}, 100);
+}
+
+function handlePhotoData(data) {
+	let col1 = '';
+	let col2 = '';
+
+	for (let i = 1; i < data.length; i++) {
+		let each = data[i];
+
+		let html = `
+			<img title="${each[0]}" alt="${each[0]}" src="${each[1]}">
+		`;
+
+		if (i % 2 === 0) {
+			col2 += html;
+		} else {
+			col1 += html;
+		}
+	}
+
+	let divs = document.querySelectorAll('#image-display > div');
+	divs[0].innerHTML = col1;
+	divs[1].innerHTML = col2;
 }
