@@ -64,7 +64,7 @@ if (navigator.serviceWorker) {
 
 /* do all the sheet stuff */
 let sheetId = '191YLtCW0myhV1qoNfudca9MaiqTTVDRPsm8YZWBTkRU';
-let apiKey = 'AIzaSyDEBLKN17IKxy0IsigeP4XB6ivTh-dGRac';
+let apiKey = 'AIzaSyDYHwLBlSQHEUQ-OgemxZ6whgrUTz08LIU';
 
 fetch(
 	`https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values:batchGet?ranges=Sponsors&ranges=Photos&ranges=Schedule&ranges=FAQ&key=${apiKey}`
