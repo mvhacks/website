@@ -47,7 +47,7 @@ window.onscroll = e => {
 	}
 }
 
-function scrollToSection(id) {
+window.scrollToSection = id => {
 	document.querySelector('#' + id).scrollIntoView({
 		behavior: 'smooth'
 	});
