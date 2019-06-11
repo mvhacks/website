@@ -149,11 +149,14 @@ td {
 	padding-right: 10px;
   	transition: background-color 0.5s ease-out;
   	background-color: transparent;
-  	min-width: 300px;
 }
 
 td:hover {
 	background-color: #230a06;
+}
+
+.first-td {
+	min-width: 100px;
 }
 
 
