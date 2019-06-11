@@ -137,12 +137,12 @@
 /* CSS References not working for some reason */
 
 tr {
-	font-size: 25px;
+	font-size: 20px;
   	transition: font-size 0.5s ease-out;
 }
 
 tr:hover {
-	font-size: 35px;
+	font-size: 30px;
 }
 
 td {
@@ -156,7 +156,33 @@ td:hover {
 }
 
 .first-td {
-	min-width: 100px;
+	min-width: 120px;
+}
+
+.schedule-table {
+	color: white;
+	width: 45vw;
+	min-width: 350px;
+}
+
+#schedule-container {
+	padding: 40px;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+}
+
+@media screen and (max-width: 800px) {
+    #schedule-container {
+    	padding: 40px;
+    	display: flex;
+    	justify-content: space-between;
+    	flex-direction: column;
+    }
+
+    #activities {
+    	margin-top: 50px;
+    }
 }
 
 
