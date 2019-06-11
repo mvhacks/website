@@ -131,7 +131,7 @@
 /* schedule */
 
 #schedule {
-	background: #1d1d1d;
+	background: #230a06;
 }
 
 /* CSS References not working for some reason */
@@ -152,7 +152,7 @@ td {
 }
 
 td:hover {
-	background-color: #230a06;
+	background-color: #1d1d1d;
 }
 
 .first-td {
@@ -220,4 +220,10 @@ td:hover {
 
 .partner-image {
 	flex: 1;
+}
+
+/* the team */
+
+#team {
+	background: #230a06;
 }
