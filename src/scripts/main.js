@@ -35,7 +35,7 @@ setTimeout(() => {
 
 window.onscroll = e => {
 	let { scrollY } = window;
-	
+
 	if (scrollY > 0) {
 
 		if (navbar.style.opacity !== '1') {
@@ -172,7 +172,7 @@ function handlePhotoData(data) {
 		let each = data[i];
 
 		let html = `
-			<img title="${each[0]}" alt="${each[0]}" src="${each[1]}">
+			<img title="${each[0]}" alt="${each[0]}" src="${each[1].substr(0,each[1].lastIndexOf("w")+1)+"500-h500-no"}">
 		`;
 
 		if (i % 2 === 0) {
