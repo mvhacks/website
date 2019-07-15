@@ -46,6 +46,27 @@
 	display: flex;
 	padding: 0 4px;
 	max-width: 50%;
+	min-width: 350px;
+}
+
+#whatis-container {
+	display: flex;
+	justify-content: space-between;
+    flex-direction: row;
+	padding: 40px;
+}
+
+@media screen and (max-width: 800px) {
+    #whatis-container {
+    	padding: 40px;
+    	display: flex;
+    	flex-direction: column;
+    	justify-content: space-between;
+    }
+
+    #image-display {
+    	margin-top: 20px;
+    }
 }
 
 #image-display > div {
@@ -81,8 +102,23 @@
 	background: #1d1d1d;
 }
 
+#faq-container {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+}
+
+@media screen and (max-width: 800px) {
+    #faq-container {
+    	display: flex;
+		justify-content: space-between;
+    	flex-direction: column;
+    }
+}
+
 .faq-item {
 	width: 100%;
+	min-width: 400px;
 }
 
 .faq-item > div > div {
@@ -203,6 +239,7 @@ td:hover {
 
 .sponsor-image > div > img {
 	max-width: 100%;
+	min-width: 150px;
 	transition: all 150ms linear;
 	filter: grayscale(.2);
 }
@@ -219,7 +256,26 @@ td:hover {
 }
 
 .partner-image {
-	flex: 1;
+	display: block;
+	flex-basis: 33%;
+}
+
+.partner-image > div {
+	padding: 25px;
+}
+
+.partner-image > div > img {
+	max-width: 100%;
+	min-width: 300px;
+	transition: all 150ms linear;
+	filter: grayscale(.2);
+}
+
+.partner-image > div > img:hover {
+	max-width: 100%;
+	filter: grayscale(1);
+	transform: scale(1.1);
+	filter: drop-shadow(10px 10px 10px #000);
 }
 
 /* the team */

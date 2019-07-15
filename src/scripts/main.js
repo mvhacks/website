@@ -31,7 +31,7 @@ frontPageTimeline.play();
 
 setTimeout(() => {
 	particlesJS.load('particles', '../assets/particles.json');
-}, 2500);
+}, 2000);
 
 window.onscroll = e => {
 	let { scrollY } = window;
