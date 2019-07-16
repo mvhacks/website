@@ -80,6 +80,8 @@ fetch(
 			handleFAQData(ranges[i].values);
 		} else if (ranges[i].range.includes('Photos')) {
 			handlePhotoData(ranges[i].values);
+		} else if (ranges[i].range.includes('Schedule')) {
+			handleScheduleData(ranges[i].values);
 		}
 	}
 });
@@ -112,9 +114,6 @@ function handleSponsorData(data) {
 
 	document.querySelector('#partners > div > div').innerHTML = partnerHTML;
 	document.querySelector('#sponsors > div > div').innerHTML = sponsorHTML;
-}
-
-function handleScheduleData(data) {
 }
 
 function handleFAQData(data) {
@@ -192,4 +191,30 @@ function handlePhotoData(data) {
 			max: 10
 		});
 	}, 100);
+}
+
+function handleScheduleData(data) {
+	let schedule = '';
+	let activities = '';
+
+	for (let i = 1; i < data.length; i++) {
+		let each = data[i];
+
+		let html = `
+			<tr>
+				<td class="first-td">${each[1]} ${each[2]}</td>
+				<td>${each[3]}</td>
+			</tr>
+		`;
+
+		if(each[0] == "General") {
+			schedule += html;
+		} else {
+			activities += html;
+		}
+	}
+
+	document.getElementById("schedule-table").innerHTML = schedule;
+	document.getElementById("activites-table").innerHTML = activities;
+
 }
