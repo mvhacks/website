@@ -27,7 +27,7 @@
 <body>
 
 	<div id="navbar">
-		<div style="display: flex; align-items: center; height: 100%; padding: 0 40px; justify-content: space-between;">
+		<div>
 			<div>
 				<img src="img/logo.png" style="height: 40px;">
 			</div>
@@ -35,25 +35,25 @@
 				<a class="link" onclick="scrollToSection('whatis')">Info</a>
 				<a class="link" onclick="scrollToSection('schedule')">Schedule</a>
 				<a class="link" onclick="scrollToSection('partners')">Sponsors</a>
-				<a class="link">Team</a>
+				<!-- <a class="link">Team</a> -->
 			</div>
 		</div>
 	</div>
 
 	<div id="front-page">
 		<div id="particles" style="position: absolute; height: 100%; width: 100%;"></div>
-		<div style="display: flex; height: 100%; align-items: center; padding: 0 30px; opacity: 0; user-select: none;">
-			<div style="height: 35vh; width: 100%;">
+		<div class="container">
+			<div class="hovering-images">
 				<img src="img/m.png" class="logo-image">
 				<img src="img/v.png" class="logo-image" style="margin-left: 16px; animation-delay: 1s;">
 			</div>
-			<div style="width: 100%; z-index: 1;">
-				<h1 style="font-family: 'PT Sans'; font-size: 110px; display: block;text-shadow: 0px 10px 20px #000;">MVHacks 3.0</h1>
-				<span style="font-family: 'Oxygen'; font-size: 50px; display: block;">The hackathon for everyone.</span>
+			<div class="hovering-text">
+				<h1>MVHacks 3.0</h1>
+				<span class="top">The hackathon for everyone.</span>
 				<br>
-				<span style="font-family: 'Oxygen'; font-size: 30px; display: block;">February 2020. Silicon Valley.</span>
+				<span class="bottom">February 2020. Silicon Valley.</span>
 				<br>
-				<a href="https://docs.google.com/forms/d/e/1FAIpQLSfUaGYhhR9BtlKta0I5yshMw9E743Ogdt33A7h8Azy_G9VoSQ/viewform" target="_blank" style="font-size: 20px;" class="btn">Get notified when sign-ups open</a>
+				<a href="https://docs.google.com/forms/d/e/1FAIpQLSfUaGYhhR9BtlKta0I5yshMw9E743Ogdt33A7h8Azy_G9VoSQ/viewform" target="_blank"class="btn">Get notified when sign-ups open</a>
 			</div>
 		</div>
 	</div>
@@ -62,11 +62,11 @@
 		<div id="whatis-container">
 			<div>
 				<div id="whatis-text">
-					<div class="underline" style="font-size: 80px; font-weight: bold; font-family: 'PT Sans'; color: #ec4d37;">What is MVHacks?</div>
+					<h1 class="section-title">What is MVHacks?</h1>
 					<br>
-					<div style="font-size: 24px; max-width: 80%; color: #fff;">MVHacks is a annual high school hackathon organized by Mountain View High School students. Both first time and more experienced programmers will gather together to code, learn, and have fun!</div>
+					<div>MVHacks is a annual high school hackathon organized by Mountain View High School students. Both first time and more experienced programmers will gather together to code, learn, and have fun!</div>
 					<br>
-					<div style="font-size: 24px; max-width: 80%; color: #fff;">MVHacks 3.0 will be the best-organized hackathon ever etc etc etc more content here.</div>
+					<div>MVHacks 3.0 will be the best-organized hackathon ever etc etc etc more content here.</div>
 				</div>
 			</div>
 			<div id="image-display">
@@ -77,7 +77,7 @@
 	</div>
 
 	<div id="faq">
-		<div style="padding: 40px;">
+		<div>
 			<h1 class="section-title">FAQ</h1>
 			<br><br>
 			<div id="faq-container">
@@ -130,11 +130,16 @@
 		</div>
 	</div>
 
-	<div id="team">
+	<!-- <div id="team">
 		<div style="padding: 40px;">
 			<h1 class="section-title">The Team</h1>
 			<div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
 			</div>
+		</div>
+	</div> -->
+
+	<div id="footer">
+		<div style="padding: 20px;">
 		</div>
 	</div>
 	

@@ -202,19 +202,18 @@ function handleScheduleData(data) {
 
 		let html = `
 			<tr>
-				<td class="first-td">${each[1]} ${each[2]}</td>
-				<td>${each[3]}</td>
+				<td class="first-td">${each[1]}</td>
+				<td>${each[2]}</td>
 			</tr>
 		`;
 
-		if(each[0] == "General") {
+		if(each[0] == 'General') {
 			schedule += html;
 		} else {
 			activities += html;
 		}
 	}
 
-	document.getElementById("schedule-table").innerHTML = schedule;
-	document.getElementById("activites-table").innerHTML = activities;
-
+	document.getElementById('schedule-table').innerHTML = schedule;
+	document.getElementById('activites-table').innerHTML = activities;
 }

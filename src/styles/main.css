@@ -26,6 +26,26 @@ a {
 	box-shadow: 0 0.2rem 0.4rem rgba(0,0,0,0.23);
 }
 
+#navbar > div {
+	display: flex;
+	align-items: center;
+	height: 100%;
+	padding: 0 40px;
+	justify-content: space-between;
+}
+
+@media screen and (max-width: 500px) {
+	#navbar > div > div:first-of-type {
+		display: none;
+	}
+	#navbar > div {
+		padding: 0 10px;
+	}
+	#navbar img {
+		display: none;
+	}
+}
+
 #navbar-links > a {
 	margin: 0 12px;
 	font-size: 18px;

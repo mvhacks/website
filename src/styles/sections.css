@@ -5,6 +5,75 @@
 	color: #fff;
 }
 
+#front-page > .container {
+	display: flex;
+	height: 100%;
+	align-items: center;
+	padding: 0 30px;
+	opacity: 0;
+	user-select: none;
+}
+
+#front-page > .container > .hovering-images {
+	height: 35vh;
+	width: 100%;
+}
+
+#front-page > .container > .hovering-text {
+	width: 100%;
+	z-index: 1;
+}
+
+#front-page > .container > .hovering-text > h1 {
+	font-family: 'PT Sans';
+	font-size: 110px;
+	display: block;
+	text-shadow: 0px 10px 20px #000;
+}
+
+#front-page > .container > .hovering-text > .top {
+	font-family: 'Oxygen';
+	font-size: 50px;
+	display: block;
+}
+
+#front-page > .container > .hovering-text > .bottom {
+	font-family: 'Oxygen';
+	font-size: 30px;
+	display: block;
+}
+
+@media screen and (max-width: 1300px) {
+	#front-page > .container > .hovering-text > h1 {
+		font-size: 90px;
+	}
+	#front-page > .container > .hovering-images {
+		height: 23vh;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	#front-page > .container {
+		flex-wrap: wrap;
+	}
+	#front-page > .container > .hovering-images {
+		height: 30vw;
+		margin-top: 100px;
+	}
+	#front-page > .container > .hovering-text > h1 {
+		font-size: 55px;
+	}
+	.btn {
+		font-size: 15px !important;
+	}
+	#front-page > .container > .hovering-text > .top {
+		font-size: 30px;
+	}
+	#front-page > .container > .hovering-text > .bottom {
+		font-size: 25px;
+	}
+}
+
 .logo-image {
 	filter: drop-shadow(5px 40px 13px #000);
 	height: 100%;
@@ -56,19 +125,6 @@
 	padding: 40px;
 }
 
-@media screen and (max-width: 800px) {
-    #whatis-container {
-    	padding: 40px;
-    	display: flex;
-    	flex-direction: column;
-    	justify-content: space-between;
-    }
-
-    #image-display {
-    	margin-top: 20px;
-    }
-}
-
 #image-display > div {
 	flex: 50%;
 	max-width: 50%;
@@ -96,24 +152,52 @@
 	font-size: 80px;
 }
 
+#whatis-text > div {
+	font-size: 24px;
+	max-width: 80%;
+	color: #fff;
+}
+
+@media screen and (max-width: 500px) {
+    #whatis-container {
+    	padding: 20px;
+    	display: flex;
+    	flex-direction: column;
+    	justify-content: space-between;
+    }
+
+    #image-display {
+    	padding: 0;
+    	margin: 0 auto;
+    	margin-top: 20px;
+    }
+
+    #image-display > div {
+    	padding: 0 8px 0 4px;
+    }
+
+    .section-title {
+    	font-size: 60px;
+    }
+    #whatis-text > div {
+    	font-size: 18px;
+    }
+}
+
 /* faq */
 
 #faq {
 	background: #1d1d1d;
 }
 
+#faq > div {
+	padding: 40px;
+}
+
 #faq-container {
 	display: flex;
 	justify-content: space-between;
 	flex-direction: row;
-}
-
-@media screen and (max-width: 800px) {
-    #faq-container {
-    	display: flex;
-		justify-content: space-between;
-    	flex-direction: column;
-    }
 }
 
 .faq-item {
@@ -164,6 +248,22 @@
 	content: url(/img/up.svg);
 }
 
+@media screen and (max-width: 500px) {
+	#faq > div {
+		padding: 20px
+	}
+
+    #faq-container {
+    	display: flex;
+		justify-content: space-between;
+    	flex-direction: column;
+    }
+
+    .faq-item {
+    	min-width: 70%;
+    }
+}
+
 /* schedule */
 
 #schedule {
@@ -173,12 +273,7 @@
 /* CSS References not working for some reason */
 
 tr {
-	font-size: 20px;
-  	transition: font-size 0.5s ease-out;
-}
-
-tr:hover {
-	font-size: 30px;
+	font-size: 18px;
 }
 
 td {
@@ -187,12 +282,8 @@ td {
   	background-color: transparent;
 }
 
-td:hover {
-	background-color: #1d1d1d;
-}
-
 .first-td {
-	min-width: 120px;
+	min-width: 80px;
 }
 
 .schedule-table {
@@ -208,7 +299,7 @@ td:hover {
 	flex-direction: row;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 500px) {
     #schedule-container {
     	padding: 40px;
     	display: flex;
@@ -218,6 +309,16 @@ td:hover {
 
     #activities {
     	margin-top: 50px;
+    }
+    #schedule-container {
+    	padding: 20px;
+    }
+    .first-td {
+    	min-width: 90px;
+    }
+    td {
+    	padding: 0;
+    	max-width: 50%;
     }
 }
 
@@ -255,6 +356,10 @@ td:hover {
 	background: #1d1d1d;
 }
 
+#partners > div {
+	padding: 20px;
+}
+
 .partner-image {
 	display: block;
 	flex-basis: 33%;
@@ -278,8 +383,19 @@ td:hover {
 	filter: drop-shadow(10px 10px 10px #000);
 }
 
+@media screen and (max-width: 500px) {
+	.partner-image > div > img {
+		min-width: 200px;
+	}
+}
+
 /* the team */
 
 #team {
+	background: #230a06;
+}
+
+/* footer */
+#footer {
 	background: #230a06;
 }
