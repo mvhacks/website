@@ -75,8 +75,9 @@
 }
 
 .logo-image {
-	filter: drop-shadow(5px 40px 13px #000);
-	height: 100%;
+	filter: drop-shadow(5px 40px 13px #111);
+	height: 120%;
+	padding-left: 3vw;
 	animation-duration: 3s;
 	animation-name: float;
 	animation-timing-function: ease-in-out;
@@ -99,7 +100,7 @@
 
 #whatis {
 	min-height: 100vh;
-	background: #230a06;
+	background: #004675;
 }
 
 #whatis-text {
@@ -148,7 +149,7 @@
 
 .section-title {
 	font-family: 'PT Sans';
-	color: #ec4c37;
+	color: #0070BB;
 	font-size: 80px;
 }
 
@@ -208,11 +209,11 @@
 .faq-item > div > div {
 	padding: 24px 16px;
 	color: #e4e4e4;
-	border-bottom: 1px solid #ec4c37;
+	border-bottom: 1px solid #0070BB;
 }
 
 .faq-item > div > div > a {
-	color: #ec4c37;
+	color: #0070BB;
 }
 
 .faq-item > div {
@@ -224,7 +225,7 @@
 .faq-item > span {
 	color: #fff;
 	font-size: 18px;
-	border-bottom: 1px solid #ec4c37;
+	border-bottom: 1px solid #0070BB;
 	padding: 16px 6px;
 	cursor: pointer;
 	display: block;
@@ -233,7 +234,7 @@
 }
 
 .faq-item > span:hover {
-	background-color: #230a06;
+	background-color: #004675;
 }
 
 .faq-item > span:after {
@@ -267,7 +268,7 @@
 /* schedule */
 
 #schedule {
-	background: #230a06;
+	background: #004675;
 }
 
 /* CSS References not working for some reason */
@@ -392,10 +393,10 @@ td {
 /* the team */
 
 #team {
-	background: #230a06;
+	background: #004675;
 }
 
 /* footer */
 #footer {
-	background: #230a06;
+	background: #004675;
 }

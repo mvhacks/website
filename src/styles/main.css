@@ -41,7 +41,7 @@ a {
 	#navbar > div {
 		padding: 0 10px;
 	}
-	#navbar img {
+	#navbar > img {
 		display: none;
 	}
 }
@@ -56,11 +56,11 @@ a {
 .btn {
 	display: inline-block;
 	padding: 16px 28px;
-	border: 2px #ec4d37 solid;
+	border: 2px #0070BB solid;
 	font-size: 20px;
 	text-align: center;
 	text-decoration: none;
-	color: #ec4d37;
+	color: #0070BB;
 	position: relative;
 	overflow: hidden;
 	transition: color 0.25s ease-in-out, border-color 0.25s ease-in-out;
@@ -75,7 +75,7 @@ a {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: #ec4d37;
+	background: #0070BB;
 	transition: transform 0.25s ease-in-out;
 	z-index: -1;
 	transform: translate3d(-100%, 0, 0);
@@ -83,7 +83,7 @@ a {
 
 .btn:hover {
 	color: #1d1d1d;
-	border: 2px #ec4d37 solid;
+	border: 2px #0070BB solid;
 }
 .btn:hover:before {
 	transform: translate3d(0, 0, 0);
@@ -105,7 +105,7 @@ a {
 	left: 0;
 	width: 100%;
 	height: 2px;
-	background: #ec4d37;
+	background: #0070BB;
 	content: '';
 	opacity: 0;
 	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
