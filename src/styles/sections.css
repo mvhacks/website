@@ -398,5 +398,10 @@ td {
 
 /* footer */
 #footer {
-	background: #004675;
+	background: #0070BB;
+	padding: 20px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
 }
