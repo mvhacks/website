@@ -2,7 +2,6 @@
 
 #front-page {
 	height: 100vh;
-	color: #fff;
 }
 
 #front-page > .container {
@@ -28,7 +27,7 @@
 	font-family: 'PT Sans';
 	font-size: 110px;
 	display: block;
-	text-shadow: 0px 10px 20px #000;
+	text-shadow: 0px 10px 20px #bbb;
 }
 
 #front-page > .container > .hovering-text > .top {
@@ -75,7 +74,7 @@
 }
 
 .logo-image {
-	filter: drop-shadow(5px 40px 13px #111);
+	filter: drop-shadow(5px 40px 13px #bbb);
 	height: 120%;
 	padding-left: 3vw;
 	animation-duration: 3s;
@@ -100,7 +99,7 @@
 
 #whatis {
 	min-height: 100vh;
-	background: #004675;
+	background: linear-gradient(45deg, var(--main-color), rgb(160, 41, 135));
 }
 
 #whatis-text {
@@ -122,7 +121,7 @@
 #whatis-container {
 	display: flex;
 	justify-content: space-between;
-    flex-direction: row;
+	flex-direction: row;
 	padding: 40px;
 }
 
@@ -149,7 +148,7 @@
 
 .section-title {
 	font-family: 'PT Sans';
-	color: #0070BB;
+	color: var(--main-color);
 	font-size: 80px;
 }
 
@@ -160,39 +159,39 @@
 }
 
 @media screen and (max-width: 500px) {
-    #whatis-container {
-    	padding: 20px;
-    	display: flex;
-    	flex-direction: column;
-    	justify-content: space-between;
-    }
+	#whatis-container {
+		padding: 20px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
 
-    #image-display {
-    	padding: 0;
-    	margin: 0 auto;
-    	margin-top: 20px;
-    }
+	#image-display {
+		padding: 0;
+		margin: 0 auto;
+		margin-top: 20px;
+	}
 
-    #image-display > div {
-    	padding: 0 8px 0 4px;
-    }
+	#image-display > div {
+		padding: 0 8px 0 4px;
+	}
 
-    .section-title {
-    	font-size: 60px;
-    }
-    #whatis-text > div {
-    	font-size: 18px;
-    }
+	.section-title {
+		font-size: 60px;
+	}
+	#whatis-text > div {
+		font-size: 18px;
+	}
 }
 
 /* faq */
 
 #faq {
-	background: #1d1d1d;
 }
 
 #faq > div {
 	padding: 40px;
+	padding-bottom: 90px;
 }
 
 #faq-container {
@@ -208,12 +207,12 @@
 
 .faq-item > div > div {
 	padding: 24px 16px;
-	color: #e4e4e4;
-	border-bottom: 1px solid #0070BB;
+	color: #353535;
+	border-bottom: 1px solid var(--main-color);
 }
 
 .faq-item > div > div > a {
-	color: #0070BB;
+	color: var(--main-color);
 }
 
 .faq-item > div {
@@ -223,9 +222,9 @@
 }
 
 .faq-item > span {
-	color: #fff;
+	color: #000;
 	font-size: 18px;
-	border-bottom: 1px solid #0070BB;
+	border-bottom: 1px solid var(--main-color);
 	padding: 16px 6px;
 	cursor: pointer;
 	display: block;
@@ -234,7 +233,8 @@
 }
 
 .faq-item > span:hover {
-	background-color: #004675;
+	background-color: var(--main-color);
+	color: #fff;
 }
 
 .faq-item > span:after {
@@ -246,7 +246,7 @@
 }
 
 .faq-item-active > span:after {
-	content: url(/img/up.svg);
+	transform: rotate(180deg);
 }
 
 @media screen and (max-width: 500px) {
@@ -254,21 +254,22 @@
 		padding: 20px
 	}
 
-    #faq-container {
-    	display: flex;
+	#faq-container {
+		display: flex;
 		justify-content: space-between;
-    	flex-direction: column;
-    }
+		flex-direction: column;
+	}
 
-    .faq-item {
-    	min-width: 70%;
-    }
+	.faq-item {
+		min-width: 70%;
+	}
 }
 
 /* schedule */
 
 #schedule {
-	background: #004675;
+	background: linear-gradient(315deg,#099783, var(--main-color));
+	padding: 60px 0;
 }
 
 /* CSS References not working for some reason */
@@ -301,33 +302,32 @@ td {
 }
 
 @media screen and (max-width: 500px) {
-    #schedule-container {
-    	padding: 40px;
-    	display: flex;
-    	justify-content: space-between;
-    	flex-direction: column;
-    }
+	#schedule-container {
+		padding: 40px;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+	}
 
-    #activities {
-    	margin-top: 50px;
-    }
-    #schedule-container {
-    	padding: 20px;
-    }
-    .first-td {
-    	min-width: 90px;
-    }
-    td {
-    	padding: 0;
-    	max-width: 50%;
-    }
+	#activities {
+		margin-top: 50px;
+	}
+	#schedule-container {
+		padding: 20px;
+	}
+	.first-td {
+		min-width: 90px;
+	}
+	td {
+		padding: 0;
+		max-width: 50%;
+	}
 }
 
 
 /* sponsor stuff */
 
 #sponsors {
-	background: #1d1d1d;
 }
 
 .sponsor-image {
@@ -348,13 +348,30 @@ td {
 
 .sponsor-image > div > img:hover {
 	max-width: 100%;
-	filter: grayscale(1);
 	transform: scale(1.1);
-	filter: drop-shadow(10px 10px 10px #000);
+	filter: drop-shadow(10px 10px 10px #aaa);
 }
 
+
+#partners-divider {
+	height: 200px;
+	background: linear-gradient(315deg,var(--main-color),#329ce2);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+}
+
+#partners-divider h1, #partners-divider h2 {
+	text-align: center;
+}
+
+#partners-divider a {
+	color: white;
+}
+
+
 #partners {
-	background: #1d1d1d;
 }
 
 #partners > div {
@@ -379,9 +396,8 @@ td {
 
 .partner-image > div > img:hover {
 	max-width: 100%;
-	filter: grayscale(1);
 	transform: scale(1.1);
-	filter: drop-shadow(10px 10px 10px #000);
+	filter: drop-shadow(10px 10px 10px #aaa);
 }
 
 @media screen and (max-width: 500px) {
@@ -393,15 +409,47 @@ td {
 /* the team */
 
 #team {
-	background: #004675;
+	background: linear-gradient(315deg,var(--main-color),#329ce2);
+}
+
+
+.profile {
+	background: #fff;
+	box-shadow: 0 0 10px 1px #00000052;
+	border-radius: 28px;
+	padding: 16px;
+	margin: 10px;
+}
+
+.profile > img {
+	height: 200px;
+	width: 200px;
+	border-radius: 50%;
+}
+
+.profile > div {
+	margin-top: 4px;
+	text-align: center;
+}
+
+.profile > div > h4 {
+	color: #555;
+}
+
+.profile > div > h5 > a {
+	color: #555;
 }
 
 /* footer */
 #footer {
-	background: #0070BB;
+	background: linear-gradient(315deg,var(--main-color),#329ce2);
 	padding: 20px;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-evenly;
 	align-items: center;
+}
+
+#copyright {
+	color: white;
 }

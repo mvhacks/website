@@ -14,7 +14,7 @@ let frontPageTimeline = anime.timeline({
 			easing: 'easeOutSine'
 		},
 		{
-			value: '#1d1d1d',
+			value: '#fff',
 			duration: 1000,
 			delay: 500,
 			easing: 'easeOutSine'
@@ -25,6 +25,15 @@ let frontPageTimeline = anime.timeline({
 	duration: 3000,
 	opacity: 1,
 	delay: 0
+}).add({
+	targets: '#front-page',
+	height: [
+		{
+			value: '80vh',
+			duration: 1000,
+			easing: 'easeOutSine'
+		}
+	]
 });
 
 frontPageTimeline.play();
@@ -67,7 +76,7 @@ let sheetId = '191YLtCW0myhV1qoNfudca9MaiqTTVDRPsm8YZWBTkRU';
 let apiKey = 'AIzaSyDYHwLBlSQHEUQ-OgemxZ6whgrUTz08LIU';
 
 fetch(
-	`https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values:batchGet?ranges=Sponsors&ranges=Photos&ranges=Schedule&ranges=FAQ&key=${apiKey}`
+	`https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values:batchGet?ranges=Sponsors&ranges=Photos&ranges=Schedule&ranges=FAQ&ranges=Team&key=${apiKey}`
 ).then(res => res.json()).then(res => {
 	let ranges = res.valueRanges;
 
@@ -80,11 +89,40 @@ fetch(
 			handleFAQData(ranges[i].values);
 		} else if (ranges[i].range.includes('Photos')) {
 			handlePhotoData(ranges[i].values);
-		} else if (ranges[i].range.includes('Schedule')) {
-			handleScheduleData(ranges[i].values);
+		} else if (ranges[i].range.includes('Team')) {
+			handleTeamData(ranges[i].values);
 		}
 	}
 });
+
+function handleTeamData(data) {
+	let directorHTML = '';
+	let memberHTML = '';
+
+	for (let i = 1; i < data.length; i++) {
+		let each = data[i];
+		let html = `
+			<div class="profile">
+				<img src="${each[3]}">
+				<div>
+					<h3>${each[1]}</h3>
+					<h4>${each[2]}</h4>
+					<h5><a href="mailto:${each[4]}">${each[4]}</a></h5>
+				</div>
+			</div>
+		`;
+
+		if (each[0] === 'Director') {
+			directorHTML += html;
+		} else if (each[0] === 'Member') {
+			memberHTML += html;
+		}
+	}
+
+	let [a, b] = document.querySelectorAll('#team > div > div');
+	a.innerHTML = directorHTML;
+	b.innerHTML = memberHTML;
+}
 
 function handleSponsorData(data) {
 	let sponsorHTML = '';
