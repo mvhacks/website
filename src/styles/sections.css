@@ -349,7 +349,7 @@ td {
 .sponsor-image > div > img:hover {
 	max-width: 100%;
 	transform: scale(1.1);
-	filter: drop-shadow(10px 10px 10px #aaa);
+	filter: drop-shadow(2px 2px 1px #aaa);
 }
 
 
@@ -366,8 +366,23 @@ td {
 	text-align: center;
 }
 
+#partners-divider h1 {
+	font-size: 50px;
+}
+
+	
 #partners-divider a {
 	color: white;
+}
+`
+@media screen and (max-width: 500px) {
+	#partners-divider h1 {
+		font-size: 30px;
+	}
+
+	#partners-divider h2 {
+		font-size: 14px;
+	}
 }
 
 
