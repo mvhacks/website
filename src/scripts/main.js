@@ -103,7 +103,7 @@ function handleTeamData(data) {
 		let each = data[i];
 		let html = `
 			<div class="profile">
-				<img src="${each[3]}">
+				<img data-src="${each[3]} class="lazyload">
 				<div>
 					<h3>${each[1]}</h3>
 					<h4>${each[2]}</h4>
@@ -135,7 +135,7 @@ function handleSponsorData(data) {
 			partnerHTML += `
 				<a href="${each[3]}" target="_blank" class="sponsor-image partner-image">
 					<div>
-						<img title=${each[1]} alt="${each[1]}" src="${each[2]}" style="${each[4] || ''}">
+						<img title=${each[1]} alt="${each[1]}" data-src="${each[2]}" class="lazyload" style="${each[4] || ''}">
 					</div>
 				</a>
 			`;
@@ -143,7 +143,7 @@ function handleSponsorData(data) {
 			sponsorHTML += `
 				<a href="${each[3]}" target="_blank" class="sponsor-image">
 					<div>
-						<img title=${each[1]} alt="${each[1]}" src="${each[2]}" style="${each[4] || ''}">
+						<img title=${each[1]} alt="${each[1]}" data-src="${each[2]}" class="lazyload" style="${each[4] || ''}">
 					</div>
 				</a>
 			`;
@@ -209,7 +209,7 @@ function handlePhotoData(data) {
 		let each = data[i];
 
 		let html = `
-			<img title="${each[0]}" alt="${each[0]}" src="${each[1].substr(0,each[1].lastIndexOf("w")+1)+"500-h500-no"}">
+			<img title="${each[0]}" alt="${each[0]}" class="lazyload" data-src="${each[1].substr(0,each[1].lastIndexOf("w")+1)+"500-h500-no"}">
 		`;
 
 		if (i % 2 === 0) {

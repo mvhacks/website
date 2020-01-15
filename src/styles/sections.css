@@ -1,56 +1,4 @@
 /* section 1 */
-
-#front-page {
-	height: 100vh;
-}
-
-#front-page > .container {
-	display: flex;
-	height: 100%;
-	align-items: center;
-	padding: 0 30px;
-	opacity: 0;
-	user-select: none;
-}
-
-#front-page > .container > .hovering-images {
-	height: 35vh;
-	width: 100%;
-}
-
-#front-page > .container > .hovering-text {
-	width: 100%;
-	z-index: 1;
-}
-
-#front-page > .container > .hovering-text > h1 {
-	font-family: 'PT Sans';
-	font-size: 110px;
-	display: block;
-	text-shadow: 0px 10px 20px #bbb;
-}
-
-#front-page > .container > .hovering-text > .top {
-	font-family: 'Oxygen';
-	font-size: 50px;
-	display: block;
-}
-
-#front-page > .container > .hovering-text > .bottom {
-	font-family: 'Oxygen';
-	font-size: 30px;
-	display: block;
-}
-
-@media screen and (max-width: 1300px) {
-	#front-page > .container > .hovering-text > h1 {
-		font-size: 90px;
-	}
-	#front-page > .container > .hovering-images {
-		height: 23vh;
-	}
-}
-
 @media screen and (max-width: 900px) {
 	#front-page > .container {
 		flex-wrap: wrap;
@@ -73,17 +21,6 @@
 	}
 }
 
-.logo-image {
-	filter: drop-shadow(5px 40px 13px #bbb);
-	height: 120%;
-	padding-left: 3vw;
-	animation-duration: 3s;
-	animation-name: float;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: infinite;
-	animation-direction: alternate;
-}
-
 @keyframes float {
 	0% {
 		-webkit-transform: translate3d(0, -14px, 0);
@@ -97,65 +34,9 @@
 
 /* section 2 */
 
-#whatis {
-	min-height: 100vh;
-	background: linear-gradient(45deg, var(--main-color), rgb(160, 41, 135));
-}
-
-#whatis-text {
-	position: -webkit-sticky;
-	position: -moz-sticky;
-	position: -ms-sticky;
-	position: -o-sticky;
-	position: sticky;
-	top: 100px;
-}
-
-#image-display {
-	display: flex;
-	padding: 0 4px;
-	max-width: 50%;
-	min-width: 350px;
-}
-
-#whatis-container {
-	display: flex;
-	justify-content: space-between;
-	flex-direction: row;
-	padding: 40px;
-}
-
-#image-display > div {
-	flex: 50%;
-	max-width: 50%;
-	padding: 0 12px;
-}
-
-#image-display > div img {
-	margin-top: 24px;
-	vertical-align: middle;
-	max-width: 100%;
-	border-radius: 6px;
-	box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.12), 0 1px 5px 0 rgba(0,0,0,.2);
-	transition: all 0.2s ease;
-}
-
 #image-display > div img:hover {
 	box-shadow: 0 8px 8px 0 rgba(0,0,0,.28), 0 6px 4px -8px rgba(0,0,0,.24), 0 4px 20px 0 rgba(0,0,0,.4);
 	filter: brightness(1.3);
-}
-
-
-.section-title {
-	font-family: 'PT Sans';
-	color: var(--main-color);
-	font-size: 80px;
-}
-
-#whatis-text > div {
-	font-size: 24px;
-	max-width: 80%;
-	color: #fff;
 }
 
 @media screen and (max-width: 500px) {
@@ -189,60 +70,9 @@
 #faq {
 }
 
-#faq > div {
-	padding: 40px;
-	padding-bottom: 90px;
-}
-
-#faq-container {
-	display: flex;
-	justify-content: space-between;
-	flex-direction: row;
-}
-
-.faq-item {
-	width: 100%;
-	min-width: 400px;
-}
-
-.faq-item > div > div {
-	padding: 24px 16px;
-	color: #353535;
-	border-bottom: 1px solid var(--main-color);
-}
-
-.faq-item > div > div > a {
-	color: var(--main-color);
-}
-
-.faq-item > div {
-	transition: max-height 0.2s ease-out;
-	max-height: 0;
-	overflow: hidden;
-}
-
-.faq-item > span {
-	color: #000;
-	font-size: 18px;
-	border-bottom: 1px solid var(--main-color);
-	padding: 16px 6px;
-	cursor: pointer;
-	display: block;
-	transition: all .2s ease;
-  	transition: background-color 0.4s ease-out;
-}
-
 .faq-item > span:hover {
 	background-color: var(--main-color);
 	color: #fff;
-}
-
-.faq-item > span:after {
-	content: url(/img/down.svg);
-	float: right;
-	margin-left: 5px;
-	width: 25px;
-	height: 25px;
 }
 
 .faq-item-active > span:after {
@@ -266,40 +96,6 @@
 }
 
 /* schedule */
-
-#schedule {
-	background: linear-gradient(315deg,#099783, var(--main-color));
-	padding: 60px 0;
-}
-
-/* CSS References not working for some reason */
-
-tr {
-	font-size: 18px;
-}
-
-td {
-	padding-right: 10px;
-  	transition: background-color 0.5s ease-out;
-  	background-color: transparent;
-}
-
-.first-td {
-	min-width: 80px;
-}
-
-.schedule-table {
-	color: white;
-	width: 45vw;
-	min-width: 350px;
-}
-
-#schedule-container {
-	padding: 40px;
-	display: flex;
-	justify-content: space-between;
-	flex-direction: row;
-}
 
 @media screen and (max-width: 500px) {
 	#schedule-container {
@@ -330,51 +126,12 @@ td {
 #sponsors {
 }
 
-.sponsor-image {
-	display: block;
-	flex-basis: 25%;
-}
-
-.sponsor-image > div {
-	padding: 25px;
-}
-
-.sponsor-image > div > img {
-	max-width: 100%;
-	min-width: 150px;
-	transition: all 150ms linear;
-	filter: grayscale(.2);
-}
-
 .sponsor-image > div > img:hover {
 	max-width: 100%;
 	transform: scale(1.1);
 	filter: drop-shadow(2px 2px 1px #aaa);
 }
 
-
-#partners-divider {
-	height: 200px;
-	background: linear-gradient(315deg,var(--main-color),#329ce2);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	color: white;
-}
-
-#partners-divider h1, #partners-divider h2 {
-	text-align: center;
-}
-
-#partners-divider h1 {
-	font-size: 50px;
-}
-
-	
-#partners-divider a {
-	color: white;
-}
-`
 @media screen and (max-width: 500px) {
 	#partners-divider h1 {
 		font-size: 30px;
@@ -389,26 +146,6 @@ td {
 #partners {
 }
 
-#partners > div {
-	padding: 20px;
-}
-
-.partner-image {
-	display: block;
-	flex-basis: 33%;
-}
-
-.partner-image > div {
-	padding: 25px;
-}
-
-.partner-image > div > img {
-	max-width: 100%;
-	min-width: 300px;
-	transition: all 150ms linear;
-	filter: grayscale(.2);
-}
-
 .partner-image > div > img:hover {
 	max-width: 100%;
 	transform: scale(1.1);
@@ -419,52 +156,4 @@ td {
 	.partner-image > div > img {
 		min-width: 200px;
 	}
-}
-
-/* the team */
-
-#team {
-	background: linear-gradient(315deg,var(--main-color),#329ce2);
-}
-
-
-.profile {
-	background: #fff;
-	box-shadow: 0 0 10px 1px #00000052;
-	border-radius: 28px;
-	padding: 16px;
-	margin: 10px;
-}
-
-.profile > img {
-	height: 200px;
-	width: 200px;
-	border-radius: 50%;
-}
-
-.profile > div {
-	margin-top: 4px;
-	text-align: center;
-}
-
-.profile > div > h4 {
-	color: #555;
-}
-
-.profile > div > h5 > a {
-	color: #555;
-}
-
-/* footer */
-#footer {
-	background: linear-gradient(315deg,var(--main-color),#329ce2);
-	padding: 20px;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-evenly;
-	align-items: center;
-}
-
-#copyright {
-	color: white;
 }
