@@ -103,7 +103,7 @@ function handleTeamData(data) {
 		let each = data[i];
 		let html = `
 			<div class="profile">
-				<img data-src="${each[3]} class="lazyload">
+				<img data-src="${each[3]} class="lazyload" alt="${each[1]}">
 				<div>
 					<h3>${each[1]}</h3>
 					<h4>${each[2]}</h4>
